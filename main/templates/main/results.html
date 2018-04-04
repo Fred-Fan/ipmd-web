@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    //console.log({{photo}})
+    <h1>Photo</h1>
+    <img src="{% static "images/example.jpg" %}">
+    <h1>Results</h1>
+    <p>{{ result }}</p>
+    <div>
+        <p>Do you agree with our result?</p>
+        <input type="radio" name="accuracy" id="agree" value="always"/>
+        <label for="always">Yes</label>
+
+        <input type="radio" name="accuracy" id="disagree" value="never"/>
+        <label for="never">No</label>
+    </div>
+    <div>
+        <p>Are you willing to share this photo with us to improve our training algorithms?</p>
+        <input type="radio" name="share" id="yes" value="Yes"/>
+        <label for="always">Yes</label>
+
+        <input type="radio" name="share" id="no" value="No"/>
+        <label for="never">No</label>
+    </div>
+</body>
+</html>
